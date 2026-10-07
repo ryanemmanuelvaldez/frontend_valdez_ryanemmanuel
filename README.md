@@ -37,6 +37,8 @@ The production build is configured to call `https://lab6-valdez-ryanemmanuel.onr
 
 On the backend, set `FRONTEND_ORIGINS` to the exact frontend origin (for example, `https://app.example.com`). For cross-site frontend and API domains, configure `SESSION_COOKIE_SECURE=true` and `SESSION_COOKIE_SAMESITE=None`; use HTTPS for both sites. These settings are required for browser session cookies to be sent with API requests.
 
+This repository includes a `render.yaml` Blueprint for a Render Static Site. In the Render Dashboard, choose **New + → Blueprint**, connect this GitHub repository, and apply the Blueprint. After Render gives the site its public `onrender.com` URL, add that exact URL to `FRONTEND_ORIGINS` in the backend Render service's environment and redeploy the backend.
+
 ## Backend features
 
 - Overview metrics are queried from `users` and `products`.
