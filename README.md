@@ -33,7 +33,7 @@ Open `http://localhost:5173/`. Vite proxies API requests to the local backend at
 
 ## Separate deployment
 
-Set `VITE_API_BASE_URL` in the frontend build environment to the backend origin (for example, `https://api.example.com`) and build with `npm run build`. Deploy the generated `dist/` directory to a static host that serves `index.html` for `/account/` paths.
+The production build is configured to call `https://lab6-valdez-ryanemmanuel.onrender.com`. To point it at a different backend, set `VITE_API_BASE_URL` in the frontend build environment and build with `npm run build`. Deploy the generated `dist/` directory to a static host that serves `index.html` for `/account/` paths.
 
 On the backend, set `FRONTEND_ORIGINS` to the exact frontend origin (for example, `https://app.example.com`). For cross-site frontend and API domains, configure `SESSION_COOKIE_SECURE=true` and `SESSION_COOKIE_SAMESITE=None`; use HTTPS for both sites. These settings are required for browser session cookies to be sent with API requests.
 
